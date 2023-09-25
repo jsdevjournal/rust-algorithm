@@ -1,17 +1,17 @@
 use std::collections::HashMap;
 
-pub fn possibility_min(n: i32, arry: &mut [i32]) -> u32 {
-    _possibility_min(&n, arry, &mut HashMap::with_capacity(n as usize))
-}
+// pub fn possibility_min(n: i32, arry: &mut [i32]) -> u32 {
+//     _possibility_min(&n, arry, &mut HashMap::with_capacity(n as usize))
+// }
 
-fn _possibility_min<'a>(n: &i32, arry: &mut [i32], memo: &'a mut HashMap<i32, bool>) -> u32 {
-    arry.sort();
-    println!("{:?}", arry);
-    for i in arry.into_iter().rev() {
-        println!("{}", i);
-    }
-    0
-}
+// fn _possibility_min<'a>(n: &i32, arry: &mut [i32], memo: &'a mut HashMap<i32, bool>) -> u32 {
+//     arry.sort();
+//     println!("{:?}", arry);
+//     for i in arry.into_iter().rev() {
+//         println!("{}", i);
+//     }
+//     0
+// }
 
 pub fn possibility(n: i32, arry: &[i32]) -> bool {
     _possibility(&n, arry, &mut HashMap::with_capacity(n as usize))
@@ -57,8 +57,8 @@ mod tests {
     fn possibility_3() {
         assert_eq!(possibility(15, &[2, 3, 5, 7, 0, 3, 10, 20]), true);
     }
-    #[test]
-    fn possibility_min_1() {
-        assert_eq!(possibility_min(15, &mut [5, 2, 1]), 0);
-    }
+    // #[test]
+    // fn possibility_min_1() {
+    //     assert_eq!(possibility_min(15, &mut [5, 2, 1]), 0);
+    // }
 }
