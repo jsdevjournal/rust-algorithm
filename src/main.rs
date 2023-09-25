@@ -1,5 +1,6 @@
 mod todo_reducer;
 mod fib;
+mod sum;
 use todo_reducer::{ TodoState, TodoAction };
 
 fn main() {
@@ -9,4 +10,6 @@ fn main() {
     println!("State: {:?}", state);
     state = todo_reducer::reducer(state, TodoAction::RemoveTodo(0));
     println!("State: {:?}", state);
+
+    sum::possibility_min(15, &mut [1, 2, 5]);
 }
